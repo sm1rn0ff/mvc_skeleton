@@ -1,0 +1,5 @@
+RewriteEngine On
+RewriteBase Web/
+RewriteRule ^admin/ backend.php [QSA,L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^(.*)$ frontend.php [QSA,L]
